@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <h2>Short URL</h2>
+        <div class="input-section" id="filters">
+            <input type="number" name="runNumber" id="RunNumber" placeholder="RunNumber">
+            <input type="number" name="runType" id="RunType" placeholder="RunType">
+            <input type="text" name="periodName" id="PeriodName" placeholder="PeriodName">
+            <input type="text" name="passName" id="PassName" placeholder="PassName">
+            <button id="generateNewUrl">
+                <i class="fas fa-link"></i>
+                Create Url</button>
+            <button id="clearFilters" class="btn-clean">
+                <i class="fas fa-trash-alt"></i>
+                Clear filters</button>
+        </div>
+        <div class="input-section">
+            <input type="url" id="longUrl" required>
+            <button id="submitBtn">
+                <i class="fas fa-scissors"></i>
+                Shorten URL</button>
+        </div>
+        <div class="input-section">
+            <input type="url" id="shortUrl" disabled>
+            <button>
+                <i class="fas fa-copy"></i>
+                Copy</button>
+        </div>
+        <h2>Redirect</h2>
+        <div class="input-section">
+            <input type="url" id="inputShortUrl" placeholder="Tiny URL">
+            <button id="redirectBtn">
+                <i class="fas fa-external-link-alt"></i>
+                Go</button>
+        </div>
+
+
+        <div style="text-align: center; border-bottom: 1px dashed #000; line-height: 0.1em; margin: 10px 0;">
+            <span style="background:#fff; padding:0 10px;">Not visible for client</span>
+          </div>
+          
+        
+        <div id="urlList">
+            <h2>Stored URLs</h2>
+
+            <button class="btn-clean" id="cleardb">
+                <i class="fas fa-trash"></i>
+                Clear database</button>
+                <button id="buttonRandom">Create 100 entries randomly</button>
+            <table id="urlsTable">
+                <thead>
+                    <tr id="tableHeaders">
+                    </tr>
+                </thead>
+                <tbody id="urls">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
